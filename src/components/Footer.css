@@ -1,0 +1,30 @@
+.footer {
+  width: 100%;
+  background: rgba(8, 18, 40, 0.72);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 17px 0;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}
