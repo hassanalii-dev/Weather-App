@@ -49,9 +49,6 @@ function Weather() {
   return (
     <main className="weather-section">
       <div className="weather-container">
-
-        {/* Hero Section */}
-
         <div className="hero-text">
           <span className="eyebrow">
             REAL-TIME FORECAST
@@ -67,8 +64,6 @@ function Weather() {
             conditions instantly.
           </p>
         </div>
-
-        {/* Search Box */}
 
         <form
           className="search-box"
@@ -91,15 +86,11 @@ function Weather() {
           </button>
         </form>
 
-        {/* Error */}
-
         {error && (
           <div className="error-message">
             {error}
           </div>
         )}
-
-        {/* Loading */}
 
         {loading ? (
           <div className="loading-card">
@@ -110,17 +101,8 @@ function Weather() {
             </p>
           </div>
         ) : weather ? (
-
-          /* =========================
-             WEATHER CARD
-          ========================= */
-
           <div className="weather-card">
-
-            {/* City + Region */}
-
             <div className="weather-top">
-
               <div>
                 <span className="location-label">
                   CURRENT WEATHER
@@ -145,13 +127,9 @@ function Weather() {
                       "Weather forecast"}
                 </p>
               </div>
-
             </div>
 
-            {/* Temperature */}
-
             <div className="temperature-area">
-
               <div className="temperature">
                 {weather.current?.temp_c ??
                   weather.temp_c ??
@@ -162,7 +140,6 @@ function Weather() {
               </div>
 
               <div className="condition">
-
                 <strong>
                   {weather.current?.condition?.text ||
                     weather.condition ||
@@ -176,21 +153,11 @@ function Weather() {
                     "--"}
                   °C
                 </span>
-
               </div>
-
             </div>
 
-            {/* =========================
-               WEATHER DETAILS
-            ========================= */}
-
             <div className="weather-details">
-
-              {/* Humidity */}
-
               <div className="detail-item">
-
                 <span className="detail-icon">
                   💧
                 </span>
@@ -207,13 +174,9 @@ function Weather() {
                     %
                   </strong>
                 </div>
-
               </div>
 
-              {/* Wind */}
-
               <div className="detail-item">
-
                 <span className="detail-icon">
                   🌬️
                 </span>
@@ -229,6 +192,7 @@ function Weather() {
                       weather.wind ??
                       "--"}{" "}
                     km/h
+
                     {(
                       weather.current?.wind_dir ||
                       weather.wind_dir
@@ -243,13 +207,9 @@ function Weather() {
                     )}
                   </strong>
                 </div>
-
               </div>
 
-              {/* Cloud Cover */}
-
               <div className="detail-item">
-
                 <span className="detail-icon">
                   ☁️
                 </span>
@@ -267,13 +227,9 @@ function Weather() {
                     %
                   </strong>
                 </div>
-
               </div>
 
-              {/* Rain Chance */}
-
               <div className="detail-item">
-
                 <span className="detail-icon">
                   🌧️
                 </span>
@@ -291,13 +247,9 @@ function Weather() {
                     %
                   </strong>
                 </div>
-
               </div>
 
-              {/* Pressure */}
-
               <div className="detail-item">
-
                 <span className="detail-icon">
                   🧭
                 </span>
@@ -315,13 +267,9 @@ function Weather() {
                     mb
                   </strong>
                 </div>
-
               </div>
 
-              {/* Visibility */}
-
               <div className="detail-item">
-
                 <span className="detail-icon">
                   👁️
                 </span>
@@ -339,13 +287,9 @@ function Weather() {
                     km
                   </strong>
                 </div>
-
               </div>
 
-              {/* UV Index */}
-
               <div className="detail-item">
-
                 <span className="detail-icon">
                   ☀️
                 </span>
@@ -362,13 +306,9 @@ function Weather() {
                       "--"}
                   </strong>
                 </div>
-
               </div>
 
-              {/* Heat Index */}
-
               <div className="detail-item">
-
                 <span className="detail-icon">
                   🔥
                 </span>
@@ -386,21 +326,11 @@ function Weather() {
                     °C
                   </strong>
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         ) : (
-
-          /* =========================
-             EMPTY STATE
-          ========================= */
-
           <div className="empty-state">
-
             <span>🌤️</span>
 
             <h3>
@@ -410,10 +340,8 @@ function Weather() {
             <p>
               Enter a city above to see its weather.
             </p>
-
           </div>
         )}
-
       </div>
     </main>
   );
