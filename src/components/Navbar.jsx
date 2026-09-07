@@ -11,7 +11,7 @@ function Navbar() {
 
         <div className="brand-text">
           <h2>Weatherly</h2>
-          <span>Weather Forecast</span>
+          <span>  Weather Forecast</span>
         </div>
 
       </div>
